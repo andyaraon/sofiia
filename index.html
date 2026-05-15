@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -314,29 +315,32 @@
     }
 
     .pfp-ring {
-      position: absolute;
-      inset: -2px;
-      border-radius: 50%;
-      padding: 2px;
-      background: var(--gradient);
-      animation: ringPulse 3s ease-in-out infinite;
-    }
-
-    @keyframes ringPulse {
-      0%, 100% { box-shadow: 0 0 24px rgba(168,85,247,0.35), 0 0 48px rgba(244,114,182,0.18); }
-      50% { box-shadow: 0 0 44px rgba(168,85,247,0.55), 0 0 80px rgba(244,114,182,0.28); }
-    }
-
-    .pfp-circle {
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(244,114,182,0.1));
-      overflow: hidden;
+      padding: 3px;
+      background: var(--gradient);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      animation: ringPulse 3s ease-in-out infinite;
+    }
+
+    .pfp-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--bg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes ringPulse {
+      0%, 100% { box-shadow: 0 0 24px rgba(168,85,247,0.45), 0 0 48px rgba(244,114,182,0.22); }
+      50% { box-shadow: 0 0 44px rgba(168,85,247,0.65), 0 0 80px rgba(244,114,182,0.35); }
     }
 
     .pfp-circle img {
@@ -838,8 +842,8 @@
       }
 
       .hero-content { order: 2; }
-      .pfp-wrap { order: 1; width: 180px; height: 180px; }
-      .pfp-circle { width: 180px; height: 180px; }
+      .pfp-wrap { order: 1; width: 200px; height: 200px; }
+      .pfp-ring { width: 200px; height: 200px; }
       .pfp-initials { font-size: 3.5rem; }
       .hero-tags { justify-content: center; }
       .hero-socials { justify-content: center; }
@@ -867,12 +871,14 @@
       .pow-grid { grid-template-columns: 1fr; }
     }
   </style>
+
 </head>
 <body>
 
-  <canvas id="atomCanvas"></canvas>
+<canvas id="atomCanvas"></canvas>
 
   <!-- NAV -->
+
   <nav>
     <a href="#hero" class="nav-logo">Sofiia</a>
     <ul class="nav-links" id="navLinks">
@@ -888,39 +894,44 @@
   </nav>
 
   <!-- HERO -->
+
   <div id="hero">
     <div class="hero-orb"></div>
 
-    <div class="hero-content">
-      <h1 class="hero-name">SOFI<span class="gradient-text">IA</span></h1>
-      <p class="hero-sub">Sofiyat &nbsp; Building in public</p>
-      <div class="hero-tags">
-        <span class="tag">Community Manager</span>
-        <span class="tag pink">Content Writer</span>
-        <span class="tag">SMM</span>
-        <span class="tag pink">Web3</span>
-        <span class="tag">Nigeria</span>
-      </div>
-      <div class="hero-socials">
-        <a href="https://x.com/madara_Ufi" target="_blank" class="btn-primary">Follow on X</a>
-        <a href="https://linkedin.com/in/atoyebi-sofiyat" target="_blank" class="btn-ghost">LinkedIn</a>
-        <a href="https://t.co/Qsw9rAbcCW" target="_blank" class="btn-ghost">Linktree</a>
-      </div>
-    </div>
+```
+<div class="hero-content">
+  <h1 class="hero-name">SOFI<span class="gradient-text">IA</span></h1>
+  <p class="hero-sub">Sofiyat &nbsp; Building in public</p>
+  <div class="hero-tags">
+    <span class="tag">Community Manager</span>
+    <span class="tag pink">Content Writer</span>
+    <span class="tag">SMM</span>
+    <span class="tag pink">Web3</span>
+    <span class="tag">Nigeria</span>
+  </div>
+  <div class="hero-socials">
+    <a href="https://x.com/madara_Ufi" target="_blank" class="btn-primary">Follow on X</a>
+    <a href="https://linkedin.com/in/atoyebi-sofiyat" target="_blank" class="btn-ghost">LinkedIn</a>
+    <a href="https://t.co/Qsw9rAbcCW" target="_blank" class="btn-ghost">Linktree</a>
+  </div>
+</div>
 
-    <div class="pfp-wrap">
-      <div class="pfp-glow"></div>
-      <div class="pfp-ring"></div>
-      <div class="pfp-circle">
-        <img src="sofiia-pfp.jpg" alt="Sofiia">
-        <span class="pfp-initials">S</span>
-      </div>
+<div class="pfp-wrap">
+  <div class="pfp-glow"></div>
+  <div class="pfp-ring">
+    <div class="pfp-circle">
+      <img src="sofiia-pfp.jpg" alt="Sofiia">
     </div>
+  </div>
+</div>
+```
+
   </div>
 
   <div class="section-divider"></div>
 
   <!-- ABOUT -->
+
   <section id="about">
     <div class="section-wrap">
       <div class="section-label">About</div>
@@ -961,95 +972,100 @@
   <div class="section-divider"></div>
 
   <!-- SKILLS -->
+
   <section id="skills">
     <div class="section-wrap">
       <div class="section-label">Expertise</div>
       <h2 class="section-title">What Gets<br><span class="gradient-text">Delivered.</span></h2>
       <div class="skills-grid">
 
-        <div class="skill-card">
-          <div class="skill-icon">◈</div>
-          <div class="skill-title">Content</div>
+```
+    <div class="skill-card">
+      <div class="skill-icon">◈</div>
+      <div class="skill-title">Content</div>
 
-          <div class="skill-item">
-            <div class="skill-name">Blog Writing</div>
-            <p class="skill-desc">I write long-form content that breaks down complex Web3 concepts into clear, compelling reads. I focus on building trust through education, so every piece keeps the audience coming back and positions the project as a credible voice in the space.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Twitter Threads</div>
-            <p class="skill-desc">I craft threads that stop the scroll from the first line. Whether it is alpha, education, or project narrative, I write in a way that spreads. Each thread is structured to hold attention and drive real engagement across the timeline.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Whitepaper Simplification</div>
-            <p class="skill-desc">I take dense, technical whitepapers and turn them into language real people actually understand. I make the vision accessible without dumbing it down, so the project resonates with both newcomers and experienced builders.</p>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">✦</div>
-          <div class="skill-title">Community</div>
-
-          <div class="skill-item">
-            <div class="skill-name">Telegram Growth</div>
-            <p class="skill-desc">I build Telegram communities from the ground up with real, engaged members. I structure the space, set the culture, and maintain consistent activity so the group feels alive and worth being in every single day.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">AMA Hosting</div>
-            <p class="skill-desc">I host AMAs that generate genuine value, not just noise. I prepare sharp questions, keep the session flowing naturally, and make sure the audience leaves with real clarity on who the team is and what they are building.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Onboarding Design</div>
-            <p class="skill-desc">I design onboarding flows that make new members feel welcomed and informed from day one. I build the systems that convert strangers into active contributors who understand the project and want to see it win.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Moderation Training</div>
-            <p class="skill-desc">I train moderators to hold community standards without killing organic energy. I set clear guidelines and make sure the team executes consistently, so the space stays healthy as it grows.</p>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">◆</div>
-          <div class="skill-title">Social Media</div>
-
-          <div class="skill-item">
-            <div class="skill-name">Twitter (X) Strategy</div>
-            <p class="skill-desc">I build X strategies that grow accounts with purpose, not just follower counts. I map content pillars, posting cadence, and engagement plays that move real numbers and build a presence people actually follow for value.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">LinkedIn Growth</div>
-            <p class="skill-desc">I grow LinkedIn presence for Web3 projects and professionals who want credibility across both crypto-native and traditional tech spaces. I bridge the gap so the brand lands well on every side of the table.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Content Calendars</div>
-            <p class="skill-desc">I build detailed content calendars that keep teams consistent and on-message. I plan weeks ahead so execution stays smooth, nothing important gets missed, and the brand voice stays tight across every platform.</p>
-          </div>
-          <div class="skill-item">
-            <div class="skill-name">Analytics and Reporting</div>
-            <p class="skill-desc">I track what matters and cut what does not. I deliver clean reports that show exactly what is working, give clear direction on what to adjust, and help teams make smarter decisions with every campaign.</p>
-          </div>
-        </div>
-
+      <div class="skill-item">
+        <div class="skill-name">Blog Writing</div>
+        <p class="skill-desc">I write long-form content that breaks down complex Web3 concepts into clear, compelling reads. I focus on building trust through education, so every piece keeps the audience coming back and positions the project as a credible voice in the space.</p>
       </div>
-
-      <div style="margin-top: 56px;">
-        <div class="section-label">Tools and Platforms</div>
-        <div class="tools-grid">
-          <div class="tool-pill">Twitter (X)</div>
-          <div class="tool-pill">Discord</div>
-          <div class="tool-pill">Telegram</div>
-          <div class="tool-pill">Medium</div>
-          <div class="tool-pill">Notion</div>
-          <div class="tool-pill">Canva</div>
-          <div class="tool-pill">Google Docs</div>
-          <div class="tool-pill">LinkedIn</div>
-        </div>
+      <div class="skill-item">
+        <div class="skill-name">Twitter Threads</div>
+        <p class="skill-desc">I craft threads that stop the scroll from the first line. Whether it is alpha, education, or project narrative, I write in a way that spreads. Each thread is structured to hold attention and drive real engagement across the timeline.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">Whitepaper Simplification</div>
+        <p class="skill-desc">I take dense, technical whitepapers and turn them into language real people actually understand. I make the vision accessible without dumbing it down, so the project resonates with both newcomers and experienced builders.</p>
       </div>
     </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">✦</div>
+      <div class="skill-title">Community</div>
+
+      <div class="skill-item">
+        <div class="skill-name">Telegram Growth</div>
+        <p class="skill-desc">I build Telegram communities from the ground up with real, engaged members. I structure the space, set the culture, and maintain consistent activity so the group feels alive and worth being in every single day.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">AMA Hosting</div>
+        <p class="skill-desc">I host AMAs that generate genuine value, not just noise. I prepare sharp questions, keep the session flowing naturally, and make sure the audience leaves with real clarity on who the team is and what they are building.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">Onboarding Design</div>
+        <p class="skill-desc">I design onboarding flows that make new members feel welcomed and informed from day one. I build the systems that convert strangers into active contributors who understand the project and want to see it win.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">Moderation Training</div>
+        <p class="skill-desc">I train moderators to hold community standards without killing organic energy. I set clear guidelines and make sure the team executes consistently, so the space stays healthy as it grows.</p>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">◆</div>
+      <div class="skill-title">Social Media</div>
+
+      <div class="skill-item">
+        <div class="skill-name">Twitter (X) Strategy</div>
+        <p class="skill-desc">I build X strategies that grow accounts with purpose, not just follower counts. I map content pillars, posting cadence, and engagement plays that move real numbers and build a presence people actually follow for value.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">LinkedIn Growth</div>
+        <p class="skill-desc">I grow LinkedIn presence for Web3 projects and professionals who want credibility across both crypto-native and traditional tech spaces. I bridge the gap so the brand lands well on every side of the table.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">Content Calendars</div>
+        <p class="skill-desc">I build detailed content calendars that keep teams consistent and on-message. I plan weeks ahead so execution stays smooth, nothing important gets missed, and the brand voice stays tight across every platform.</p>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name">Analytics and Reporting</div>
+        <p class="skill-desc">I track what matters and cut what does not. I deliver clean reports that show exactly what is working, give clear direction on what to adjust, and help teams make smarter decisions with every campaign.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 56px;">
+    <div class="section-label">Tools and Platforms</div>
+    <div class="tools-grid">
+      <div class="tool-pill">Twitter (X)</div>
+      <div class="tool-pill">Discord</div>
+      <div class="tool-pill">Telegram</div>
+      <div class="tool-pill">Medium</div>
+      <div class="tool-pill">Notion</div>
+      <div class="tool-pill">Canva</div>
+      <div class="tool-pill">Google Docs</div>
+      <div class="tool-pill">LinkedIn</div>
+    </div>
+  </div>
+</div>
+```
+
   </section>
 
   <div class="section-divider"></div>
 
   <!-- COMMUNITY -->
+
   <section id="community">
     <div class="section-wrap" style="padding-top: 80px; padding-bottom: 80px;">
       <div class="section-label">Community</div>
@@ -1065,6 +1081,7 @@
   <div class="section-divider"></div>
 
   <!-- PROOF OF WORK -->
+
   <section id="pow">
     <div class="section-wrap">
       <div class="section-label">Proof of Work</div>
@@ -1087,6 +1104,7 @@
   <div class="section-divider"></div>
 
   <!-- CONTACT -->
+
   <section id="contact">
     <div class="section-wrap">
       <div class="contact-grid">
@@ -1128,6 +1146,7 @@
   </section>
 
   <!-- FOOTER -->
+
   <footer>
     <p>© 2026 Sofiia &nbsp; Lagos, Nigeria</p>
     <p>Powered by Smart Circle &nbsp; <a href="https://x.com/andyaraon" target="_blank">@andyaraon</a></p>
